@@ -63,11 +63,23 @@ session_start();
 								<h3 style="display: inline-block; color: rgb(255, 255, 255); margin-right: 5px;"><?php echo $_SESSION['usuario']; ?></h3>
 								<!--<a href="user.php"><span class="glyphicon glyphicon glyphicon-cog"></span></a>-->
 								<!-- Button trigger modal -->
-								  <?php
-									if($_SESSION['usuario'] == ""){
-										echo '<button type="button" style="margin: 0;" class="btn btn-primary btn-sm" data-target="#myModal" data-toggle="modal" >Registrarse</button>';
+								   <?php
+									if($_SESSION['autentificado'] == false){
+										echo '<button type="button" style="margin: 0;" class="btn btn-primary btn-sm" data-target="#myModal" data-toggle="modal" >Log In</button>';
 									} else {
-										echo '<a class="btn btn-primary btn-sm" href="user-config.php" >Ingresar</a><a href="salir.php">Salir</a>';
+									//	echo '<a class="btn btn-primary btn-sm" href="user-config.php" >';
+									//	echo $_SESSION['usuario'];
+									//	echo '</a><a href="salir.php">Salir</a>';
+
+								echo  '<div class="dropdown">
+										  	<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										    USUARIO
+										    <span class="caret"></span>
+										  	</button>
+										  	<ul class="dropdown-menu" aria-labelledby="dLabel">
+										    ...
+										 	 </ul>
+										</div>';
 									}
 								  ?>
 							</div>
