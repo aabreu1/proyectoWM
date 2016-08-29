@@ -65,7 +65,7 @@ session_start();
 								<!-- Button trigger modal -->
 								  <?php
 									if($_SESSION['usuario'] == ""){
-										echo '<button type="button" style="margin: 0;" class="btn btn-primary btn-sm" data-target="#myModal" data-toggle="modal" >Registrarse</button>';
+										echo '<button type="button" style="margin: 0;" class="btn btn-primary btn-sm" data-target="#myModal" data-toggle="modal" >Hola Mundo</button>';
 									} else {
 										echo '<a class="btn btn-primary btn-sm" href="user-config.php" >Ingresar</a><a href="salir.php">Salir</a>';
 									}
